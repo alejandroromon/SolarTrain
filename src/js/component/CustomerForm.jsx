@@ -1,4 +1,5 @@
 import React from "react";
+import PaymentButton from "./stripe.jsx";
 
 function CustomerForm() {
 
@@ -68,36 +69,35 @@ function CustomerForm() {
                     id="recipient-email"
                   />
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheckDefault"
                   />
-                  <label class="form-check-label" for="flexCheckDefault">
-                    I would like travel in business class
-                  </label>
+                  <label className="form-check-label" for="flexCheckDefault">
+                    I would like travel in business class                  </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheckDefault"
                   />
-                  <label class="form-check-label" for="flexCheckDefault">
+                  <label className="form-check-label" for="flexCheckDefault">
                     I would like to have a menu on board
                   </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheckDefault"
                   />
-                  <label class="form-check-label" for="flexCheckDefault">
+                  <label className="form-check-label" for="flexCheckDefault">
                     I would like to sit in a quiet wagon
                   </label>
                 </div>
@@ -107,6 +107,7 @@ function CustomerForm() {
               <button type="button" className="btn btn-success mb-3 mt-3">
                 Book journey
               </button>
+              {/* <PaymentButton /> */}
             </div>
           </div>
         </div>
