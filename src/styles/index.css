@@ -1,12 +1,129 @@
 
-/* 
+body {
+    font-family: 'Newsreader', serif;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+/* input{
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1 solid red;
+}
 
-*/
+input:focus{
+    outline: none;
+
+}
+
+label{
+    color: rgb(112, 35, 35);
+    font-size: 14px;
+    font-weight: normal;
+    left: 5px;
+    top: 10px;
+    transition: 0.3s ease all;
+    -moz-transition: 0.3 ease all;
+    -webkit-transition: 0.3 ease all;
+}
+
+input:focus ~ label{
+    top: -20px;
+    font-size: 20px;
+    color: rgb(51, 32, 218);
+}
+
+.span2{
+    display: block;
+    width: 300px;
+}
+
+.span2:before, .span2::after{
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    background: grey;
+    transition: 0.3s ease all;
+    -moz-transition: 0.3 ease all;
+    -webkit-transition: 0.3 ease all;
+}
+
+.span2:before{
+    left: 50%
+}
+
+.span2:after{
+    right: 50%;
+}
+
+input:focus ~ .span2:before, input:focus ~ .span2:after{
+    width: 50%;
+}
+
+.span1{
+    height: 60%;
+    width: 300px;
+    top: 25%;
+    left: 0;
+    opacity: 0.5;
+}
+
+input:focus ~ .span1{
+    -webkit-animation: inputbrillo 0.3s ease;
+    -moz-animation: inputbrillo 0.3s ease;
+    animation: inputbrillo 0.3s ease;
+} */
+
+/* @-webkit-keyframes inputbrillo{
+    from {background: red;}
+    to {width: 0; background: transparent;}
+}
+
+@-moz-keyframes inputbrillo{
+    from {background: red;}
+    to {width: 0; background: transparent;}
+}
+
+@keyframes inputbrillo{
+    from {background: red;}
+    to {width: 0; background: transparent;}
+} */
+
+/* input, select{
+    border-radius: 5px;
+    margin: 40px 25px;
+    width: 400px;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid red;
+    transition: all 0.3s cubic-bezier(.75, .82, .08, 1);
+    background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0), 95%, red 4%);
+    background-position: -200px, 0;
+    background-repeat: no-repeat;
+    color: darken(red, 20%);
+}
+
+select:focus, input:focus{
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+}
+
+select::-webkit-select-placeholder, input::-webkit-input-placeholder{
+    color: red;
+    font-size: 14px;
+    transform: translateY(-20px);
+    visibility: visible !important;
+}
+
+form{
+    box-sizing: border-box;
+    margin: 100px auto 0;
+    box-shadow: 2px 2px 5px 1px rgba(25,25,25,0.2);
+    padding-bottom: 40px;
+    border-radius: 3px;
+    padding: 15px;
+}
+ */
