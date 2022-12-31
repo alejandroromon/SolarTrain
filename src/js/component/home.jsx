@@ -24,6 +24,8 @@ const SearchingForm = () => {
   return (
     // Here the customer will select preferences to search for a train
     <div>
+      <h1 className="d-flex justify-content-center text-dark m-2 mb-1">Travel as usual, take care of the planet as never before. </h1>
+      <h3 className="d-flex justify-content-center text-dark mt-1 mb-4">Breakfast in Paris. Brunch in London.</h3>
     <div className="container-fluid">
       <div className="row">
         <div className="w-50 d-flex justify-content-center">
@@ -54,7 +56,8 @@ const SearchingForm = () => {
       </div>
       </div> 
 
-      <div className="col-6 bg-dark">
+      <div className="col-6">
+        <img src="img/train.png"></img>
       Aqui va una imagen de un tren
       Object fit para que no se deforme la imagen
       </div>
@@ -63,12 +66,12 @@ const SearchingForm = () => {
 {/* Once clicked on the search button will appear cards with the next 3 trains that fits with the origin, time_depart and date_time_depart */}
       <div className="col-6 d-flex justify-content-center mt-3">
         {trips.map((train, i) => (
-          <div key={i} className="bg-dark m-3 col-3 rounded-3 ms-2 pb-2 mt-2 pt-2 ps-2 shadow-lg">
+          <div key={i} className="bg-dark m-4 col-3 rounded-3 ms-3 pb-2 mt-3 pt-3 ps-4 shadow-lg">
             <div>Date of depart: {train.date}</div>
             <div>Depart time: {train.time_depart}</div>
             <div>Arrival time: {train.time_arrival}</div>
             <div>Destination: {train.destination}</div>
-            <div>Available seats: {train.available_seats >= passengers ? train.available_seats : `"Sorry, there are ${train.available_seats} free place/s. Please try with less travellers or in a different date"`}</div>
+            <div>Available seats: {train.available_seats} <br></br><onpopstate className="bg-dark m-3 col-3 rounded-3 ms-2 pb-2 mt-2 pt-2 ps-2 ">{ train.available_seats >= passengers ? "" : "Please try with less travellers or in a different date"}</onpopstate></div>
             <CustomerFormModal />
           </div>
         )
@@ -84,3 +87,4 @@ const SearchingForm = () => {
 export default SearchingForm;
 
 {/* Once clicked on Book now will appear a modal where we will ask for Name, Surname and email in order to add the feature of sending a confirmation number*/}
+// `"Sorry, there are ${train.available_seats} free place/s. Please try with less travellers or in a different date"`

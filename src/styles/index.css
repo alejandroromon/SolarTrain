@@ -22,6 +22,17 @@ input, select{
     color: #fff;
 }
 
+#message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#inner-message {
+    margin: 0 auto;
+}
+
 /* input{
     font-size: 14px;
     padding: 10px 10px 10px 10px;

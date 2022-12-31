@@ -1,15 +1,18 @@
 import React from 'react';
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className='bg-dark w-100'>
-      <p>Copyright 2022</p>
-      <div>
-        <a href="https://www.facebook.com/alejandro.romeromontero.3" target="_blank">
+    <footer className='d-flex bg-dark w-100'>
+      <p>By Alejandro Romero at 2022</p>
+      <div className="d-flex justify-content-end">
+        <a href="https://www.linkedin.com/in/alejandroromo/" target="_blank" className='p-2'>
+          <FaLinkedin size={32} />
+        </a>
+        <a href="https://www.facebook.com/alejandro.romeromontero.3" target="_blank" className='p-2'>
           <FaFacebook size={32} />
         </a>
-        <a href="https://www.instagram.com/alejandroromon/" target="_blank">
+        <a href="https://www.instagram.com/alejandroromon/" target="_blank" className='p-2'>
           <FaInstagram size={32} />
         </a>
       </div>
