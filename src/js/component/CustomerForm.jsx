@@ -3,6 +3,19 @@ import PaymentButton from "./stripe.jsx";
 
 function CustomerForm() {
 
+  
+  function handleBookJourney(event) {
+    // show the alert message
+    alert("Your journey has been booked successfully!");
+
+    // close the modal after 3 seconds
+    setTimeout(function () {
+      // find the modal element and trigger the "hide" event
+      let modal = document.querySelector("#exampleModal");
+      let event = new Event("hide");
+      modal.dispatchEvent(event);
+    }, 3000);
+  }
 
   return (
     <div className="text-dark rounded-3">
@@ -77,7 +90,8 @@ function CustomerForm() {
                     id="flexCheckDefault"
                   />
                   <label className="form-check-label" for="flexCheckDefault">
-                    I would like travel in business class                  </label>
+                    I would like travel in business class{" "}
+                  </label>
                 </div>
                 <div className="form-check">
                   <input
@@ -104,7 +118,11 @@ function CustomerForm() {
               </form>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-success mb-3 mt-3">
+              <button
+                type="button"
+                className="btn btn-success mb-3 mt-3"
+                onClick={handleBookJourney}
+              >
                 Book journey
               </button>
               {/* <PaymentButton /> */}
