@@ -4,20 +4,33 @@ import CustomerFormModal from "./CustomerForm.jsx";
 import Footer from "./footer.jsx";
 
 const SearchingForm = () => {
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(new Date().toISOString().slice(0, 16));
   const [passengers, setPassengers] = useState(1);
   const [departure, setDeparture] = useState("");
   const [trips, setTrips] = useState([]);
 
+  const currentDate = new Date();
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    
+
     // Filters to get an array of the next 3 available trips based on the customer search
-    const filterDeparture = trains.filter((train) => train.origin === departure);
-    const filterDate = filterDeparture.filter((train) => new Date(train.date_time_depart) >= new Date(date).getTime());
-    const filterSeats = filterDate.filter((train) => train.available_seats >= passengers).slice(0, 3)
+    const filterDeparture = trains.filter(
+      (train) => train.origin === departure
+    );
+    const filterDate = filterDeparture.filter(
+      (train) => new Date(train.date_time_depart) >= new Date(date).getTime()
+    );
+    const filterSeats = filterDate
+      .filter((train) => train.available_seats >= passengers)
+      .slice(0, 3);
     setTrips(filterSeats);
+    
   };
+  
+  
 
   return (
     // Here the customer will select preferences to search for a train. Once clicked on the search button will appear cards with the next 3 trains that fits with the origin, time_depart, date_time_depart and available seats.
@@ -53,7 +66,7 @@ const SearchingForm = () => {
                   <input
                     type="datetime-local"
                     value={date}
-                    min={new Date()}
+                    min={currentDate.toISOString().slice(0, 16)}
                     onChange={(event) => setDate(event.target.value)}
                   />
                 </label>
@@ -74,7 +87,7 @@ const SearchingForm = () => {
           </div>
 
           <div className="col-6">
-            <img src="img/train.png"></img>
+            <img src="img/train.png"/>
             Aqui va una imagen de un tren Object fit para que no se deforme la
             imagen
           </div>
@@ -88,7 +101,7 @@ const SearchingForm = () => {
               key={i}
               className="bg-dark m-4 col-3 rounded-3 ms-3 pb-2 mt-3 pt-3 ps-4 shadow-lg"
             >
-              <div>Date of depart: {train.date}</div>
+              <div>Date of depart: {train.date.split("/")[1]+ "/" + train.date.split("/")[0] + "/" + train.date.split("/")[2]}</div>
               <div>Depart time: {train.time_depart}</div>
               <div>Arrival time: {train.time_arrival}</div>
               <div>Destination: {train.destination}</div>
