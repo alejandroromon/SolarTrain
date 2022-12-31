@@ -3,8 +3,8 @@ import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className='d-flex bg-dark w-100'>
-      <p>By Alejandro Romero at 2022</p>
+    <footer className='d-flex bg-dark w-100 justify-content-between'>
+      <p className='mr-auto'>By Alejandro Romero at 2022</p>
       <div className="d-flex justify-content-end">
         <a href="https://www.linkedin.com/in/alejandroromo/" target="_blank" className='p-2 d-flex justify-content-end'>
           <FaLinkedin size={32} />

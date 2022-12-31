@@ -14,27 +14,18 @@ const SearchingForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    
-
     // Filters to get an array of the next 3 available trips based on the customer search
-    const filterDeparture = trains.filter(
-      (train) => train.origin === departure
-    );
-    const filterDate = filterDeparture.filter(
-      (train) => new Date(train.date_time_depart) >= new Date(date).getTime()
-    );
-    const filterSeats = filterDate
-      .filter((train) => train.available_seats >= passengers)
-      .slice(0, 3);
+    const filterDeparture = trains.filter((train) => train.origin === departure);
+    const filterDate = filterDeparture.filter((train) => new Date(train.date_time_depart) >= new Date(date).getTime());
+    const filterSeats = filterDate.filter((train) => train.available_seats >= passengers).slice(0, 3);
     setTrips(filterSeats);
-    
   };
-  
-  
+
 
   return (
     // Here the customer will select preferences to search for a train. Once clicked on the search button will appear cards with the next 3 trains that fits with the origin, time_depart, date_time_depart and available seats.
     // It is important to avoid customer frustation, that why instead of showing a warning if there is not available places it is shown the next one with enough spaces.
+    
     <div>
       <h1 className="d-flex justify-content-center text-dark m-2 mb-1">
         Travel as usual, take care of the planet as never before.{" "}
