@@ -57,14 +57,14 @@
 		]
 	},
 	"dependencies": {
-		"@stripe/react-stripe-js": "^1.16.1",
-		"@stripe/stripe-js": "^1.46.0",
+		"bootstrap": "^5.2.3",
 		"prop-types": "^15.7.2",
 		"query-string": "^7.0.1",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-icons": "^4.7.1",
 		"react-polyfills": "0.0.1",
-		"react-router": "^6.0.2"
+		"react-router": "^6.0.2",
+		"react-stripe-checkout": "^2.6.3"
 	}
 }

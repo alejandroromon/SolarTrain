@@ -1,5 +1,5 @@
 import React from "react";
-import PaymentButton from "./stripe.jsx";
+import Payment from "./stripe.jsx";
 
 function CustomerForm() {
 
@@ -116,7 +116,7 @@ function CustomerForm() {
               >
                 Book journey
               </button>
-              {/* <PaymentButton /> */}
+              <Payment className="btn btn-primary"/>
             </div>
           </div>
         </div>

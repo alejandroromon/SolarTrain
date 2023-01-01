@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import trains from "../../train_results.json";
 import CustomerFormModal from "./CustomerForm.jsx";
 import Footer from "./footer.jsx";

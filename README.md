@@ -27,6 +27,7 @@ This project was made using the follow technologies:
 * Implementing Stripe for payments.
 * Fixing responsive breakpoints.
 * Adding animations and transitions to the design.
+* Creating a carrousel to the cards to show future results.
 * Developing the project for Android/IOS.
 * Improve the design according to actual standars.
 * Create upsellings and crossellings (i.e: Offering bothway tickets, membership program, booking hotels or car rentals).
