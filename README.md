@@ -21,10 +21,11 @@ This project was made using the follow technologies:
 # :rocket: Features
 
 * Web to find trains for the route Paris - London - Paris
+* Payment with Stripe implemented
 
 ### :rocket::rocket: Future Features
 
-* Implementing Stripe for payments.
+* Improve Stripe checkout.
 * Fixing responsive breakpoints.
 * Adding animations and transitions to the design.
 * Creating a carrousel to the cards to show future results.
