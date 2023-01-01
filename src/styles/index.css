@@ -10,6 +10,11 @@ footer {
     bottom: 0;
 }
 
+.ImagenTren{
+    object-fit: contain;
+    width: 100%;
+}
+
 input, select{
     width: 250px;
     border: 0;

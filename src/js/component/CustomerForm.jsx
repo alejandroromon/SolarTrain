@@ -4,17 +4,8 @@ import PaymentButton from "./stripe.jsx";
 function CustomerForm() {
 
   
-  function handleBookJourney(event) {
-    // show the alert message
+  function handleBookJourney() {
     alert("Your journey has been booked successfully!");
-
-    // close the modal after 3 seconds
-    setTimeout(function () {
-      // find the modal element and trigger the "hide" event
-      let modal = document.querySelector("#exampleModal");
-      let event = new Event("hide");
-      modal.dispatchEvent(event);
-    }, 3000);
   }
 
   return (

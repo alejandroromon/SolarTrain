@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import trains from "../../train_results.json";
 import CustomerFormModal from "./CustomerForm.jsx";
 import Footer from "./footer.jsx";
+import trainphoto from "../../img/train.jpg"
 
 const SearchingForm = () => {
   const [date, setDate] = useState(new Date().toISOString().slice(0, 16));
@@ -35,8 +36,8 @@ const SearchingForm = () => {
       </h3>
       <div className="container-fluid">
         <div className="row">
-          <div className="w-50 d-flex justify-content-center">
-            <div className="col-5 justify-content-center rounded-3 bg-dark mt-5 mb-4 shadow-lg">
+          <div className="col-5 d-flex justify-content-center">
+            <div className="justify-content-center rounded-3 bg-dark mt-5 mb-4 shadow-lg">
               <form className="ms-3 pb-3 mt-3 pt-3" onSubmit={handleSubmit}>
                 <h2>Ready for a new Adventure?</h2>
                 <label>
@@ -77,10 +78,8 @@ const SearchingForm = () => {
             </div>
           </div>
 
-          <div className="col-6">
-            <img src="img/train.png"/>
-            Aqui va una imagen de un tren Object fit para que no se deforme la
-            imagen
+          <div className="d-flex col-5">
+            <img className="ImagenTren" src={trainphoto}/>
           </div>
         </div>
 
@@ -92,11 +91,11 @@ const SearchingForm = () => {
               key={i}
               className="bg-dark m-4 col-3 rounded-3 ms-3 pb-2 mt-3 pt-3 ps-4 shadow-lg"
             >
-              <div>Date of depart: {train.date.split("/")[1]+ "/" + train.date.split("/")[0] + "/" + train.date.split("/")[2]}</div>
-              <div>Depart time: {train.time_depart}</div>
-              <div>Arrival time: {train.time_arrival}</div>
-              <div>Destination: {train.destination}</div>
-              <div>Available seats: {train.available_seats}</div>
+              <div><strong>From:  </strong>&nbsp;{train.origin}<strong>&nbsp;&nbsp;To:  </strong>&nbsp;{train.destination}</div>
+              <div><strong>Date of depart:</strong> {train.date.split("/")[1]+ "/" + train.date.split("/")[0] + "/" + train.date.split("/")[2]}</div>
+              <div><strong>Depart time:</strong> {train.time_depart}</div>
+              <div><strong>Arrival time:</strong> {train.time_arrival}</div>   
+              <div><strong>Available seats:</strong> {train.available_seats}</div>
               <CustomerFormModal />
             </div>
           ))}
