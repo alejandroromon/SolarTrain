@@ -10,7 +10,7 @@ footer {
     bottom: 0;
 }
 
-.ImagenTren{
+.ImagenTren {
     object-fit: contain;
     width: 100%;
 }
@@ -25,17 +25,6 @@ input, select{
     background-color: transparent;
     font-size: 1rem;
     color: #fff;
-}
-
-#message {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-#inner-message {
-    margin: 0 auto;
 }
 
 /* input{

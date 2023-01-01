@@ -44,10 +44,10 @@ const SearchingForm = () => {
 
       <div className="container-fluid row">
         <div className="col-6">
-          <div className="pb-3">
-            <div className="justify-content-center rounded-3 bg-dark mt-5 mb-4 shadow-lg h-50">
+          <div className="d-flex pb-3 justify-content-center">
+            <div className="rounded-3 bg-dark mt-5 mb-4 shadow-lg h-50">
               <form
-                className="ms-3 pb-3 mt-3 pt-3 h-75"
+                className="ms-4 me-3 pb-3 mt-3 pt-3"
                 onSubmit={handleSubmit}
               >
                 <h2>Ready for a new Adventure?</h2>
@@ -125,7 +125,7 @@ const SearchingForm = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-5">
           <img className="ImagenTren" src={trainphoto} />
         </div>
       </div>
