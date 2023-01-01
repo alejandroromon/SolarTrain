@@ -8,6 +8,7 @@
 * [Features](#rocket-features)
 * [How to Run](#construction_worker-how-to-run)
 * [Found a bug? Missing a specific feature?](#bug-issues)
+* [Other features](#monocle_face-other-features)
 
 # :computer: Technologies
 This project was made using the follow technologies:
