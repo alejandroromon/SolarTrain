@@ -25,6 +25,7 @@ This project was made using the follow technologies:
 
 ### :rocket::rocket: Future Features
 
+* Adding Backend.
 * Improve Stripe checkout.
 * Fixing responsive breakpoints.
 * Adding animations and transitions to the design.
@@ -36,6 +37,8 @@ This project was made using the follow technologies:
 * Automatize mailing system following the customer journey: tracking empty carts, tickets in the mail after the purchasing, adding the journey to his calendar, asking for feedback to improve, sending discounts...
 * Deploy a ChatBot to help the customer, easing and optimizing the Customer service job.
 * Translate the webpage in French.
+* Adding Google Analitycs to get KPI´s and be able to make A/B testing.
+* Use Mouseflow to track customers sessions.
 
 # :construction_worker: How to run
 ```bash
