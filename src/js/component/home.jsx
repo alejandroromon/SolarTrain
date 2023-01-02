@@ -16,15 +16,9 @@ const SearchingForm = () => {
     event.preventDefault();
 
     // Filters to get an array of the next 3 available trips based on the customer search
-    const filterDeparture = trains.filter(
-      (train) => train.origin === departure
-    );
-    const filterDate = filterDeparture.filter(
-      (train) => new Date(train.date_time_depart) >= new Date(date).getTime()
-    );
-    const filterSeats = filterDate
-      .filter((train) => train.available_seats >= passengers)
-      .slice(0, 3);
+    const filterDeparture = trains.filter((train) => train.origin === departure);
+    const filterDate = filterDeparture.filter((train) => new Date(train.date_time_depart) >= new Date(date).getTime());
+    const filterSeats = filterDate.filter((train) => train.available_seats >= passengers).slice(0, 3);
     setTrips(filterSeats);
   };
 
@@ -126,7 +120,7 @@ const SearchingForm = () => {
           </div>
         </div>
         <div className="col-5">
-          <img className="ImagenTren" src={trainphoto} />
+          <img className="ImagenTren d-none d-md-block" src={trainphoto} />
         </div>
       </div>
       <Footer />
